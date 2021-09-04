@@ -2,8 +2,10 @@
   "name": "todolist-app",
   "version": "1.0.0",
   "description": "To Do List App",
-  "main": "index.js",
+  "main": "./app/index.js",
   "scripts": {
+    "start": "node .",
+    "dev": "nodemon --watch src app/index.js --inspect-brk",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
