@@ -2,7 +2,7 @@
 
 ## Register User & Admin
 
-**POST /auth/register_admin**
+**POST /auth/register**
 ----
 Register User & Admin to the to do list app
 * **Required Role:** `admin or user`
@@ -16,10 +16,6 @@ Register User & Admin to the to do list app
     email: string,
     fullname: string,
     password: string,
-    role: {
-            id_role: integer,
-            role_name: string,
-          }
   }
 ```
 ```
@@ -86,8 +82,8 @@ Log in to the to do list app
        {"email": "johndoe@example.com"},
        {"password": "1221312312"},
        {"role": "user"},
-       {"accessToken": "awdkaowjdaonda92412h412"},
      ]
+    "accessToken": "awdkaowjdaonda92412h412"
 }
 ```
 
@@ -149,7 +145,7 @@ Sending new password and token to user
 ```
 {
     password: alsdn190
-    jwt_token: kas9213nskbxd819
+    access_token: kas9213nskbxd819
 }
 ```
 
@@ -227,8 +223,6 @@ Signing out from the todo list app
 
 
 
-
-
 # Users
 
 * User object
@@ -237,7 +231,11 @@ Signing out from the todo list app
   id_user: integer
   fullname: string
   email: string
-  id_role: integer
+  role: {
+          id_role: integer
+          role_name: string
+          role_desc: string
+        }
   created_at: datetime(iso 8601)
   updated_at: datetime(iso 8601)
 }
@@ -714,7 +712,6 @@ Delete todo
   updated_at: datetime(iso 8601)
 }
 ```
-
 
 
 ## Get attachment
