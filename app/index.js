@@ -34,4 +34,3 @@ app.listen(
     () => console.log(`App its alive in http://localhost:${PORT}`
 ));
 
-module.exports = router;
