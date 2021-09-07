@@ -10,7 +10,8 @@ const allStatuses = async() => {
 
 // will call statusrepository with id as param and return status name only
 const status = async(id) => {
-    return  statusRepository.findById(id).name;
+    let stats = await statusRepository.findById(id);
+    return stats.name;
 };
 
 module.exports = {
