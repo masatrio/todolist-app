@@ -29,6 +29,17 @@ const users = require('./routes/user');
 app.use('/users', users);
 
 
+
+
+// You guys can try this endpoint to get all statuses or status by id
+// we will delete this endpoint later
+const statusController = require('./controllers/status');
+
+app.get('/statuses', statusController.getAll);
+app.get('/statuses/:status_id', statusController.getStatus);
+// end of status endpoint
+
+
 app.listen(
     PORT,
     () => console.log(`App its alive in http://localhost:${PORT}`
