@@ -14,7 +14,7 @@ const findById = (id_attachment) => {
     });
 };
 
-const create = (id_todolist ,attachment) => {
+const create = (id_todolist, attachment) => {
     return models.tb_attachment.create({
         url: attachment.url,
         caption: attachment.caption,
@@ -23,14 +23,20 @@ const create = (id_todolist ,attachment) => {
 };
 
 const update = (attachment) => {
-    return models.tb_attachment.create({
+    return models.tb_attachment.update({
         caption: attachment.caption,
+    }, {
+        where: {
+            id_attachment: id_attachment
+        }
     });
 };
 
 const destroy = (id_attachment) => {
     return models.tb_attachment.destroy({
-        where: { id_attachment: id_attachment }
+        where: {
+            id_attachment: id_attachment
+        }
     });
 };
 
@@ -38,6 +44,6 @@ module.exports = {
     all,
     findById,
     create,
-update,
-destroy,
+    update,
+    destroy,
 };
