@@ -27,7 +27,7 @@ const update = (attachment) => {
         caption: attachment.caption,
     }, {
         where: {
-            id_attachment: id_attachment
+            id_attachment: attachment.id_attachment
         }
     });
 };
