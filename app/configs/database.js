@@ -1,12 +1,27 @@
-const mysql = require('mysql');
-
+require('dotenv').config();
 const env = process.env;
 
-const conn = mysql.createPool({
-    host: env.MYSQL_HOST,
-    user: env.MYSQL_USER,
-    password: env.MYSQL_PASS,
-    database: env.MYSQL_DB,
-});
 
-module.exports = conn;
+module.exports = {
+    "development": {
+        "username": env.DB_USER,
+        "password": env.DB_PASS,
+        "database": env.DB_NAME,
+        "host": env.DB_HOST,
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": env.DB_USER,
+        "password": env.DB_PASS,
+        "database": env.DB_NAME,
+        "host": env.DB_HOST,
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": env.DB_USER,
+        "password": env.DB_PASS,
+        "database": env.DB_NAME,
+        "host": env.DB_HOST,
+        "dialect": "mysql"
+    }
+};
