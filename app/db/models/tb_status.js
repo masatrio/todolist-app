@@ -20,9 +20,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   tb_status.init({
+    id_status: {
+      primaryKey: true,
+      type: DataTypes.INTEGER,
+    },
     name: DataTypes.STRING
   }, {
     sequelize,
+
     modelName: 'tb_status',
   });
   return tb_status;

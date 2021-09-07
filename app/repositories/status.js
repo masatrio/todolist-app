@@ -13,7 +13,7 @@ const all = () => {
 const findById = (id) => {
     return models.tb_status.findOne({
         where: {
-            id: id
+            id_status: id
         }
     });
 };

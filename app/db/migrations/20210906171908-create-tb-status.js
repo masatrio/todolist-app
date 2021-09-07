@@ -1,24 +1,24 @@
 'use strict';
 module.exports = {
-  up: async (queryInterface, Datatypes) => {
+  up: async (queryInterface, DataTypes) => {
     await queryInterface.createTable('tb_statuses', {
-      id_role: {
+      id_status: {
+        primaryKey: true,
         allowNull: false,
         autoIncrement: true,
-        primaryKey: true,
-        type: Datatypes.INTEGER
+        type: DataTypes.INTEGER
       },
       name: {
         allowNull: false,
-        type: Datatypes.STRING
+        type: DataTypes.STRING
       },
       createdAt: {
         allowNull: false,
-        type: Datatypes.DATE
+        type: DataTypes.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Datatypes.DATE
+        type: DataTypes.DATE
       }
     });
   },
