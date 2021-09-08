@@ -1,15 +1,9 @@
-// First we import all models from models/index.js
 const models = require('../db/models/index');
 
-
-// Then we can use models.model_name to access ORM method such as findAll, findOne, etc
-
-// all -> get all statuses
-const all = () => {
+const getAll = () => {
     return models.tb_status.findAll();
 };
 
-// findById -> get statuses by id
 const findById = (id) => {
     return models.tb_status.findOne({
         where: {
@@ -20,6 +14,6 @@ const findById = (id) => {
 
 
 module.exports = {
-    all,
+    getAll,
     findById,
 };
