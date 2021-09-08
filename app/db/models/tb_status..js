@@ -1,4 +1,3 @@
-'use strict';
 const {
   Model
 } = require('sequelize');
@@ -13,22 +12,24 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
 
-    toJSON(){
-      return  {
-        ...this.get(), createdAt: undefined, updatedAt: undefined
-      };
-    }
-  };
+  }
+
   tb_status.init({
     id_status: {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    name: DataTypes.STRING
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
   }, {
     sequelize,
-
+    timestamps: false,
+    // tableName: 'tb_statuses',
     modelName: 'tb_status',
   });
+
   return tb_status;
 };
