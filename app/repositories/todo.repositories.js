@@ -1,6 +1,6 @@
 const models = require('../db/models/index');
 
-const getAllTodo = () => {
+const getAll = () => {
     return models.tb_todo.findAll();
 };
 
@@ -38,7 +38,7 @@ const destroy = (todo) => {
 };
 
 module.exports = {
-    getAllTodo,
+    getAll,
     findByID,
     create,
     update,
