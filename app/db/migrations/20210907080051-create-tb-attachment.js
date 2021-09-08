@@ -10,7 +10,9 @@ module.exports = {
       },
       id_todolist: {
         allowNull: false,
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        foreignKey: true,
+        references: { model: 'tb_todolists', key: 'id_todolist' },
       },
       url: {
         type: DataTypes.STRING
