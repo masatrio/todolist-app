@@ -2,7 +2,7 @@
 const models = require('../db/models/index');
 
 
-const all = () => {
+const getAll = () => {
     return models.tb_attachment.findAll();
 };
 
@@ -41,7 +41,7 @@ const destroy = (id_attachment) => {
 };
 
 module.exports = {
-    all,
+    getAll,
     findById,
     create,
     update,
