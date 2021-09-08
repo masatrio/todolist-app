@@ -8,6 +8,10 @@ module.exports = {
         primaryKey: true,
         type: DataTypes.INTEGER
       },
+      id_todolist: {
+        allowNull: false,
+        type: DataTypes.INTEGER
+      },
       url: {
         type: DataTypes.STRING
       },
