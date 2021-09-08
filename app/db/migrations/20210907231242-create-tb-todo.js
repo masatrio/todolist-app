@@ -10,6 +10,8 @@ module.exports = {
       },
       id_user: {
         allowNull: false,
+        foreignKey: true,
+        reference: {model: 'tb_users', key: 'id_user'},
         type: Sequelize.INTEGER
       },
       title: {
