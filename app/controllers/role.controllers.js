@@ -1,6 +1,6 @@
-const roleService = require('../services/role')
+const roleService = require('../services/role.services')
 
-const getAllRole = async(req, res) =>{
+const c_getAllRole = async(req, res) =>{
     let roles = await roleService.getAllRoles();
 
     return res.status(200).json({
@@ -10,9 +10,9 @@ const getAllRole = async(req, res) =>{
 };
 
 // getStatus will return 1 status by id
-const getRole = async(req, res) =>{
+const c_getRole = async(req, res) =>{
     let id = req.params.id_role;
-    let role = await roleService.getRoleById(id);
+    let role = await roleService.getRole(id);
 
     return res.status(200).json({
         role: role
@@ -21,6 +21,6 @@ const getRole = async(req, res) =>{
 };
 
 module.exports = {
-    getAllRole,
-    getRole
+    c_getAllRole,
+    c_getRole
 };
