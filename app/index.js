@@ -28,6 +28,14 @@ app.get('/', (req, res) => {
 const users = require('./routes/user');
 app.use('/users', users);
 
+// You guys can try this endpoint to get all roles or role by id
+// we will delete this endpoint later
+const roleController = require('./controllers/role');
+
+app.get('/roles', roleController.getAllRole);
+app.get('/roles/:id_role', roleController.getRole);
+// end of status endpoint
+
 
 
 
