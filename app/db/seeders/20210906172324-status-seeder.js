@@ -1,5 +1,4 @@
-'use strict';
-
+// Seeder tb_status
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('tb_statuses', [{
