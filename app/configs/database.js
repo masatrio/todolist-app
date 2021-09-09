@@ -22,6 +22,9 @@ module.exports = {
         "password": env.DB_PASS,
         "database": env.DB_NAME,
         "host": env.DB_HOST,
-        "dialect": "postgres"
+        "dialect": "postgres",
+        "dialectOptions": {
+            "ssl": true
+          }
     }
 };
