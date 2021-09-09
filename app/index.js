@@ -1,12 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const router = express.Router();
 
 
 require('dotenv').config();
 const PORT = process.env.PORT;
-
-
 
 const app = express();
 
@@ -27,26 +24,6 @@ app.get('/', (req, res) => {
 // User Routes
 const users = require('./routes/user');
 app.use('/users', users);
-
-// You guys can try this endpoint to get all roles or role by id
-// we will delete this endpoint later
-const roleController = require('./controllers/role.controllers');
-
-app.get('/roles', roleController.c_getAllRole);
-app.get('/roles/:id_role', roleController.c_getRole);
-// end of status endpoint
-
-
-
-
-// You guys can try this endpoint to get all statuses or status by id
-// we will delete this endpoint later
-const statusController = require('./controllers/status');
-
-app.get('/statuses', statusController.getAll);
-app.get('/statuses/:status_id', statusController.getStatus);
-// end of status endpoint
-
 
 app.listen(
     PORT,
