@@ -17,6 +17,8 @@ module.exports = (sequelize, DataTypes) => {
   tb_attachment.init({
     id_attachment: {
       primaryKey: true,
+      autoIncrement: true,
+
       type: DataTypes.INTEGER,
     },
     url: DataTypes.STRING,

@@ -16,6 +16,8 @@ module.exports = (sequelize, DataTypes) => {
 
   tb_status.init({
     id_status: {
+      autoIncrement: true,
+
       primaryKey: true,
       type: DataTypes.INTEGER,
     },

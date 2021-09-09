@@ -16,6 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   tb_role.init({
     id_role: {
       primaryKey: true,
+      autoIncrement: true,
+
       type: DataTypes.INTEGER
     },
     name: DataTypes.STRING,
