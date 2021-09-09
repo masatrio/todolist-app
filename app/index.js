@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
 const users = require('./routes/user');
 app.use('/users', users);
 
+//Todolist Routes
+const todolist = require('./routes/todolist');
+app.use('/todolist', todolist);
+
 app.listen(
     PORT,
     () => console.log(`App its alive in http://localhost:${PORT}`
