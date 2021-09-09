@@ -4,6 +4,7 @@
   "description": "To Do List App",
   "main": "./app/index.js",
   "scripts": {
+    "build": "sequelize db:migrate && sequelize db:seed:all",
     "start": "node .",
     "dev": "nodemon --watch app app/index.js --inspect-brk",
     "test": "echo \"Error: no test specified\" && exit 1"
