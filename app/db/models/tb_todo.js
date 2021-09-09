@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(tb_user) {
-      this.belongsTo(tb_user, {foreignKey: 'id_user'})
+    static associate(models) {
+      this.belongsTo(models.tb_user, {foreignKey: 'id_user'})
     }
   };
   tb_todo.init({

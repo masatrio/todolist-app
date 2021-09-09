@@ -1,5 +1,5 @@
 // First we import status service
-const statusService = require('../services/status');
+const statusService = require('../services/status.service');
 
 
 // Then we can create function to handle request validation & response

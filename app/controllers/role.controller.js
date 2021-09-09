@@ -1,4 +1,4 @@
-const roleService = require('../services/role.services')
+const roleService = require('../services/role.service');
 
 const c_getAllRole = async(req, res) =>{
     let roles = await roleService.getAllRoles();

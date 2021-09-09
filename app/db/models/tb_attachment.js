@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(tb_todolist) {
-      this.belongsTo(tb_todolist, { foreignKey: 'id_todolist' });
+    static associate(models) {
+      this.belongsTo(models.tb_todolist, { foreignKey: 'id_todolist' });
     }
   };
   tb_attachment.init({
