@@ -23,7 +23,9 @@ app.get('/', (req, res) => {
 
 // User Routes
 const users = require('./routes/user');
+const todos = require('./routes/todo.route');
 app.use('/users', users);
+app.use('/todos', todos);
 
 app.listen(
     PORT,
