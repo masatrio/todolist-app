@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-  };
+  }
   tb_role.init({
     id_role: {
       primaryKey: true,
@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING
   }, {
     sequelize,
+    timestamps: false,
     modelName: 'tb_role',
   });
   return tb_role;
