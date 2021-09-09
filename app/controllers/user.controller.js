@@ -113,7 +113,7 @@ const c_createUser = async (req, res) => {
             password: req.body.password,
         };
 
-        let newUser = await userService.createUser(1, user);
+        let newUser = await userService.createUser(2, user);
 
         return res.status(200).json({
             data: newUser,
