@@ -20,9 +20,15 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    id_todo: DataTypes.STRING,
+    id_todo: {
+      foreignKey: true,
+      type: DataTypes.INTEGER
+    },
     task: DataTypes.STRING,
-    id_status: DataTypes.STRING,
+    id_status: {
+      foreignKey: true,
+      type: DataTypes.INTEGER
+    },
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE
   }, {

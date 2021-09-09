@@ -9,12 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_todo: {
+        foreignKey:true,
+        reference: {model: 'tb_todos', key: 'id_todo'},
         type: Sequelize.INTEGER
       },
       task: {
         type: Sequelize.STRING
       },
       id_status: {
+        foreignKey:true,
+        reference: {model: 'tb_statuses', key: 'id_status'},
         type: Sequelize.STRING
       },
       created_at: {

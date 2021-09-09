@@ -1,6 +1,6 @@
 const models = require('../db/models/index');
 
-const getAllTodo = () => {
+const getAll = () => {
     return models.tb_todolist.findAll();
 };
 
@@ -24,12 +24,13 @@ const update = (todolist) => {
         task: todolist.task
     }, {
         where: {
-            id_todolist: todolist.id_todolist
+            id_todolist: todolist.id_todolist,
+            id_todo: id_todo
         }
     });
 };
 
-const destroy = (todolist) => {
+const destroy = (id_todolist) => {
     return models.tb_todolist.destroy({
         where: {
             id_todolist: id_todolist
@@ -38,7 +39,7 @@ const destroy = (todolist) => {
 };
 
 module.exports = {
-    getAllTodo,
+    getAll,
     findByID,
     create,
     update,
