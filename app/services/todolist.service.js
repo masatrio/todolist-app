@@ -1,5 +1,4 @@
-const todolistRepository = require('../repositories/todolist.repositories')
-const todoRepository = require('../repositories/todo.repository')
+const todolistRepository = require('../repositories/todolist.repository')
 
 const getAllTodolist = async() => {
     return todolistRepository.getAll();

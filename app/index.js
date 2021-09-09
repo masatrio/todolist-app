@@ -27,7 +27,7 @@ app.use('/users', users);
 
 //Todolist Routes
 const todolist = require('./routes/todolist');
-app.use('/todolist', todolist);
+app.use('/', todolist);
 
 app.listen(
     PORT,
