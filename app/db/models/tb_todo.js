@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   tb_todo.init({
     id_todo: {
       primaryKey: true,
+      autoIncrement: true,
       type: DataTypes.INTEGER
     },
     id_user: DataTypes.INTEGER,
